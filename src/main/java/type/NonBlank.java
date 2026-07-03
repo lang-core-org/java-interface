@@ -11,6 +11,6 @@ public non-sealed interface NonBlank<ValueType extends CharSequence> extends Che
     @Override
     default boolean check(final ValueType value){
         return (value != null)
-            && (Pattern.matches("^\\s*\\S[\\s\\S]*$", value));
+            && (Pattern.matches("^(?U)\\s*\\S[\\s\\S]*$", value));
     }
 }
