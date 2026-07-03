@@ -11,6 +11,9 @@
 ### How To Use:
 - used into your project
 - read and inspired a new idea
+### Talking:
+- Talking on Issues, but don't except update
+- NO Pull requests
 ---
 ### License: Apache License 2.0
 Copyright [2026] [GitHub @lang-core-org]
