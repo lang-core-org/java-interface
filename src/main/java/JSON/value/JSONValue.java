@@ -1,3 +1,8 @@
 package JSON.value;
 
-public sealed interface JSONValue permits JSONSpecifiedValue {}
+
+public sealed interface JSONValue permits
+JSONSpecifiedValue,
+JSONNull{
+
+}

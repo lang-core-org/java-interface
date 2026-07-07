@@ -3,25 +3,18 @@ package JSON.value;
 
 import type.NonNull;
 
-public sealed interface JSONSpecifiedValue<ValueType> extends JSONValue permits
+public sealed interface JSONSpecifiedValue<ValueType> extends JSONValue,NonNull<ValueType> permits
 JSONArray,
 JSONMap,
 JSONBoolean,
 JSONNumber,
-JSONString,
-JSONNull{
+JSONString{
 
     /**
-     * @return get specified value
+     * throw {@link UnsupportedOperationException}
      */
-    ValueType value();
-
-    /**
-     * checked {@link JSONSpecifiedValue#value()} by {@link NonNull}
-     * @implNote <b>DO NOT OVERRIDE</b>
-     */
-    default void checkedNonNull(){
-        final NonNull<ValueType> checker = this::value;
-        checker.value(); //checking value
+    @Override
+    default ValueType unchecked_value(){
+        throw new UnsupportedOperationException();
     }
 }

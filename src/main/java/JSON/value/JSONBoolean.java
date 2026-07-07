@@ -1,7 +1,9 @@
 package JSON.value;
 
+import type.CheckedValue;
+
 public record JSONBoolean(Boolean value) implements JSONSpecifiedValue<Boolean> {
     public JSONBoolean{
-        checkedNonNull();
+        CheckedValue.requireCheckedValue(this,value);
     }
 }
