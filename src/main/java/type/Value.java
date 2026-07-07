@@ -3,7 +3,7 @@ package type;
 public sealed interface Value<ValueType>
 permits CheckedValue,
         UnCheckedValue,
-        UnionType{
+        UnionType {
 
     /**
      * @return get the value
